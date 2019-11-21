@@ -1,4 +1,6 @@
 $(function(){
+    "use strict";
+    
     $('.next').click(function(){ 
         $('.carousel').carousel('next');
         return false; 
