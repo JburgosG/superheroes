@@ -6,8 +6,8 @@ import { RankingComponent } from './components/ranking/ranking.component';
 
 const ROUTES: Routes = [    
     { path: 'home', component: HomeComponent },
+    { path: 'top', component: RankingComponent },
     { path: 'heroe/:id', component: HeroComponent },
-    { path: 'ranking', component: RankingComponent },
     { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 
