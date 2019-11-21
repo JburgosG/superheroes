@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 
 import { app_routes } from './app.routes';
 
+import {NgxPaginationModule} from 'ngx-pagination';
+
 import { TruncatePipe } from './pipes/truncate.pipe';
 
 import { AuthService } from './services/auth.services';
@@ -23,6 +25,7 @@ import { RankingComponent } from './components/ranking/ranking.component';
     RankingComponent
   ],
   imports: [
+    NgxPaginationModule,
     HttpClientModule,
     BrowserModule,
     app_routes

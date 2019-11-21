@@ -3,7 +3,7 @@
 </div>
 
 <div class="row" *ngIf="!load">
-    <div class="col-4 mb-4" *ngFor="let heroe of heroes">
+    <div class="col-4 mb-4" *ngFor="let heroe of heroes | paginate: { itemsPerPage: 9, currentPage: page }">
         <div class="card">
             <div class="row no-gutters">
                 <div class="col-md-4">
@@ -27,4 +27,5 @@
             </div>
         </div>
     </div>
+    <pagination-controls (pageChange)="page = $event"></pagination-controls>
 </div>

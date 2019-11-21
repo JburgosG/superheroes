@@ -11,6 +11,7 @@ import { HeroesService, Heroe } from '../../services/heroes.services';
 export class HomeComponent implements OnInit {
   
   load: boolean;
+  page: number = 1;
   heroes:Heroe[] = [];
 
   constructor(
@@ -68,5 +69,4 @@ export class HomeComponent implements OnInit {
       });
     });
   }
-
 }
