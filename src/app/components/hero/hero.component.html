@@ -1,1 +1,18 @@
-<p>hero works!</p>
+<div text-center *ngIf="load" class="mgt-3">
+    Cargando...
+</div>
+
+<div *ngIf="!load">
+    <div class="col-12 row">
+        <div class="col-4">
+            <img class="img-thumbnail" [src]="hero.picture" [alt]="hero.name">
+        </div>
+        <div class="col-8 card">
+            <div class="card-body">
+                <h5 class="card-title">{{ hero.name }}</h5>
+                <p class="card-text">{{ hero.info }}</p>
+                <p class="card-text text-muted">{{ hero.publisher.name }}</p>
+            </div>
+        </div>
+    </div>
+</div>
