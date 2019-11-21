@@ -11,6 +11,7 @@ export class RankingService {
   likes: any = null;
   ranking: any = {};
   hero_id: any = null;
+  dont_likes: any = null;
 
   constructor(public http: HttpClient) {} 
 
@@ -49,28 +50,32 @@ export class RankingService {
       let url = URI + "ranking";
       this.http.post(url, params, headers).subscribe((data) => {
         this.hero_id = phero_id;
-        this.saveStorage();
+        this.saveStorage(ptype);
         resolve();
       });
   });
   }
 
-  saveStorage(){
-    if(localStorage.getItem('likes')){
-      let likes = JSON.parse(localStorage.getItem('likes'));
-      likes.push(this.hero_id);
-      localStorage.setItem('likes', JSON.stringify(likes));
+  saveStorage(ptype:string){
+    if(localStorage.getItem(ptype)){
+      let json = JSON.parse(localStorage.getItem(ptype));
+      json.push(this.hero_id);      
+      localStorage.setItem(ptype, JSON.stringify(json));
     }else{      
-      localStorage.setItem('likes', JSON.stringify([this.hero_id]));
+      localStorage.setItem(ptype, JSON.stringify([this.hero_id]));
     }
   }
 
-  loadStorage(){
+  loadStorage(type:string){
     return new Promise((resolve, reject) => {
-        if(localStorage.getItem('likes')){
-            this.likes = localStorage.getItem('likes');
+      if(localStorage.getItem(type)){
+        if(type === 'likes'){
+          this.likes = localStorage.getItem(type);
+        }else{
+          this.dont_likes = localStorage.getItem(type);
         }
-        resolve();
+      }
+      resolve();
     });
   }
 }
