@@ -12,6 +12,10 @@
                 <h5 class="card-title">{{ hero.name }}</h5>
                 <p class="card-text">{{ hero.info }}</p>
                 <p class="card-text text-muted">{{ hero.publisher.name }}</p>
+                <p class="card-text">
+                    <small class="pointer btn btn-sm btn-success" (click)="like(hero.id)">Me gusta</small>
+                    <small class="pointer btn btn-sm btn-info" (click)="dontLike(hero.id)">No me gusta</small>
+                </p>
             </div>
         </div>
     </div>

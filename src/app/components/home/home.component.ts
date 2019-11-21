@@ -27,4 +27,12 @@ export class HomeComponent implements OnInit {
     });
   }
 
+  like(hero_id){
+    alert('ooo');
+  }
+
+  dontLike(hero_id){
+    alert('aaa');
+  }
+
 }

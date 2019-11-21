@@ -15,9 +15,12 @@
                         <p class="card-text">
                             <small class="text-muted">{{ heroe.publisher.name }}</small><br>
                             <small>
-                                {{ heroe.info | truncate: 40}} 
-                                <a [routerLink]="['/heroe', heroe.id]">Ver Más</a>
+                                <a [routerLink]="['/heroe', heroe.id]">Ver Heroé</a>
                             </small>
+                        </p>
+                        <p class="card-text">
+                            <small class="pointer btn btn-sm btn-success" (click)="like(heroe.id)">Me gusta</small>
+                            <small class="pointer btn btn-sm btn-info" (click)="dontLike(heroe.id)">No me gusta</small>
                         </p>
                     </div>
                 </div>
