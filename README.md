@@ -1,27 +1,8 @@
-# Superheroes
+# Frontend (Interfaz de usuario)
+Como se especifico en la prueba el posible uso de algún framework para el desarrollo de esta app, en mi caso desarrolle la misma haciendo uso del **Framework Angular 8**, con sus mejores practicas implementando el **CLI de angular** en componentes, servicios, pipes, archivos de configuración, etc.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.19.
+**Documentación de Instalación**: https://www.evernote.com/shard/s680/sh/406d23a8-ca74-4340-9767-b4170ed10ed0/f019919f702646aa6c77391bf6537655
 
-## Development server
+Gracias por permitirme participar en este proceso de selección.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Saludos!
