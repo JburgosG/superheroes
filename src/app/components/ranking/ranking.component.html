@@ -2,13 +2,13 @@
     Cargando...
 </div>
 
-<div id="carouselExampleControls" class="carousel slide col-5" data-ride="carousel" *ngIf="!load">
+<div id="carouselExampleControls" class="carousel slide col-4" data-ride="carousel" *ngIf="!load">
     <div class="carousel-inner">
         <div class="carousel-item" *ngFor="let top of ranking; let i = index" [ngClass]="{active: i == 0}">
             <img class="d-block w-100" [src]="top.hero.picture" [alt]="top.hero.name">
             <div class="carousel-caption d-none d-md-block">
                 <h5>{{ top.hero.name }}</h5>
-                <p>{{ top.likes }}</p>
+                <p>{{ top.likes }} Me gusta</p>
             </div>
         </div>
     </div>
